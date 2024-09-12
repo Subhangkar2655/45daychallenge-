@@ -1,0 +1,67 @@
+Week 3 :
+Q1.
+
+def smallest(lst):
+    if not lst:  # Check if the list is empty
+        return None
+    return min(lst)
+
+list1=[]
+le=int(input("Enter nunber of elements you want to add: \n"))
+for i in range(0,le):
+    a=int(input("enter element :\n"))
+    list1.append(a)
+print(f"The smallest element is: ", smallest(list1))
+
+
+
+
+Q2.
+Def convert_length(meters):
+    Feet = meters * 3.28084
+    Return feet
+
+Def convert_weight(kilograms):
+    Pounds = kilograms * 2.20462
+    Return pounds
+
+Def convert_temperature(celsius):
+    Fahrenheit = (celsius * 9/5) + 32
+    Return fahrenheit
+
+Print(“1000 meters is”, convert_length(1000),” feet”)
+Print(“68 kilograms is” ,convert_weight(68), “pounds”)
+Print(“50 Celsius is “,convert_temperature(50), “Fahrenheit”)
+
+
+
+
+Q3.
+Catalog = {}
+
+Def add_book(book_title):
+    Catalog[book_title] = ‘available’
+    Print(f”’{book_title}’ has been added to the catalog.”)
+
+Def checkout_book(book_title):
+    If catalog.get(book_title) == ‘available’:
+        Catalog[book_title] = ‘checked out’
+        Print(f”You have checked out ‘{book_title}’.”)
+    Elif catalog.get(book_title) == ‘checked out’:
+        Print(f”’{book_title}’ is already checked out.”)
+    Else:
+        Print(f”’{book_title}’ is not in the catalog.”)
+
+Def return_book(book_title):
+    If catalog.get(book_title) == ‘checked out’:
+        Catalog[book_title] = ‘available’
+        Print(f”’{book_title}’ has been returned.”)
+    Else:
+        Print(f”’{book_title}’ is either not checked out or not in the catalog.”)
+
+
+Add_book(“Indica”)
+Checkout_book(“The howlers”)
+Return_book(“The Great Gatsby”)
+
+
